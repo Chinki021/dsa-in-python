@@ -22,4 +22,8 @@ class Solution:
             last_digit=num%10
             result=result*10+last_digit
             num=num//10
-        return sign * result
+        reult = sign * result
+        if result < -(2**31) or result > (2**31 - 1):
+            return 0
+
+        return result
